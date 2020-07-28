@@ -13,5 +13,4 @@ WORKDIR /nps
 ADD start.sh /nps/start.sh
 RUN chmod +x /nps/start.sh
 ADD nps.conf /nps/conf/
-VOLUME /nps/conf
 CMD /nps/start.sh
