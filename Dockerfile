@@ -8,8 +8,9 @@ RUN wget --no-check-certificate https://github.com/ehang-io/nps/releases/downloa
 RUN tar xzf linux_amd64_server.tar.gz -C /nps
 RUN rm -rf linux_amd64_server.tar.gz
 
+WORKDIR //nps
 ADD start.sh /nps/start.sh
 RUN chmod +x /nps/start.sh
 ADD nps.conf /nps/conf/
-VOLUME /nps/conf
+#VOLUME /nps/conf
 CMD /nps/start.sh
